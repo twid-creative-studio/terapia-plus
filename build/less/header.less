@@ -1,6 +1,141 @@
 @import "variables";
 
 header{
-	
+	&:after{
+		content: "";
+		width: 0;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	height: 133px;
+	background: #fff;
+	border-bottom: 1px solid #ccc2d1;
+	position: relative;
+	.logo{
+		top: 50%;
+		left: 68px;
+		position: absolute;
+		transform: translateY(-50%);
+		width: 298px;
+		height: 80px;
+		background: url(../img/logo.png) no-repeat center center;
+		background-size: cover;
+	}
+
+	.right{
+		top: 50%;
+		right: 28px;
+		position: absolute;
+		transform: translateY(-50%);
+
+		.phone,
+		.app,
+		.account,
+		.reg
+		{
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 46px;
+			border-right: 2px solid #f0ab00;
+
+			&:last-child{
+				border-right: none;
+			}
+		}
+
+		.phone{
+			padding: 0 16px;
+			a{
+				font-weight: 300;
+				font-size: @font-size_30px;
+				color: #f0ab00;
+				letter-spacing: 30*20/1000px;
+			}
+		}
+
+		.app{
+			padding: 0 24px;
+			span,
+			a
+			{
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 46px;
+    			font-size: @font-size_15px;
+				color: #3c1053;
+				font-family: 'HelveticaNeueCyr-Roman';
+    			font-weight: 400;
+
+				img{
+					vertical-align: middle ;
+				}
+			}
+			span{
+				margin-right: 15px;
+				&:before{
+					content: "";
+					width: 19px;
+					height: 29px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-top: -3px;
+					position: relative;
+					margin-right: 12px;
+					background: url(../img/ui/phone_icon@x2.png) no-repeat center center;
+					background-size: cover;
+				}
+			}
+			a{
+				&:nth-of-type(1){
+					margin-right: 5px;
+				}
+			}
+		}
+		.account{
+			padding: 0 19px;
+
+			a{
+				color: #3c1053;
+				font-family: 'HelveticaNeueCyr-Roman';
+    			font-weight: 400;
+    			font-size: @font-size_15px;
+				&:before{
+					content: "";
+					width: 28px;
+					height: 27px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-top: -5px;
+					position: relative;
+					margin-right: 10px;
+					background: url(../img/ui/account_icon.png) no-repeat center center;
+					background-size: cover;
+				}
+			}
+		}
+		.reg{
+			padding: 0 25px;
+			
+			a{
+				color: #3c1053;
+				font-family: 'HelveticaNeueCyr-Roman';
+    			font-weight: 400;
+    			font-size: @font-size_15px;
+				&:before{
+					content: "";
+					width: 29px;
+					height: 30px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-top: -5px;
+					position: relative;
+					margin-right: 8px;
+					background: url(../img/ui/reg_icon.png) no-repeat center center;
+					background-size: cover;
+				}
+			}
+		}
+	}
 }	
 

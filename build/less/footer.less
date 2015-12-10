@@ -1,5 +1,75 @@
 @import "variables";
 
 footer{
-	
+	height: 45px;
+	background: #f0ab00; 
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+	.menu{
+		width: calc(~'100% - 360px');
+		display: inline-block;
+
+		&:after {
+		    content: '';
+		    width: 0;
+		    height: 0;
+		    clear: both;
+		    visibility: hidden;
+		}
+
+		li{
+			float: left;
+		    position: relative;
+		    width: 100/5%;
+		    height: 45px;
+		    z-index: 1;
+		    vertical-align: top;
+		    list-style: none;
+		    text-align: center;
+
+			a{
+				line-height: 45px;
+				text-transform: uppercase;
+				color: #341556;
+				font-weight: 500;
+
+				&:before{
+					content: "";
+					width: 16px;
+					height: 8px;
+					background: url(../img/ui/footer-menu-trigger_icon@x2.png) no-repeat center center;
+					background-size: cover;
+					display: inline-block;
+					vertical-align: middle;
+					position: relative;
+					margin-top: -3px;
+					margin-right: 11px;
+				}
+			}
+		}
+	}
+
+	.copyright{
+		float: right;
+		margin-right: 30px;
+		color: #3c1053;
+		font-weight: 500;
+		font-size: @font-size_16px;
+		line-height: 40px;
+
+		span,
+		img
+		{
+			display: inline-block;
+			vertical-align: middle;
+			span{
+				text-transform: uppercase;
+			}
+		}
+		img{
+			margin-left: 7px;
+		}
+	}
 }
