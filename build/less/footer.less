@@ -1,6 +1,9 @@
 @import "variables";
 
 footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 	height: 45px;
 	background: #f0ab00; 
 	margin: 0;
@@ -8,7 +11,7 @@ footer{
 	overflow: hidden;
 
 	.menu{
-		width: calc(~'100% - 360px');
+		width: calc(~'100% - 400px');
 		display: inline-block;
 
 		&:after {
@@ -28,6 +31,31 @@ footer{
 		    vertical-align: top;
 		    list-style: none;
 		    text-align: center;
+		    transition: all 0.1s linear;
+
+		    &:hover{
+		    	background: #8b004c;
+		    	a{
+		    		color: #fff;
+
+		    		&:before{
+						background: url(../img/ui/footer-menu-trigger_icon_sprite@x2.png) no-repeat left bottom;
+						background-size: 200%;
+					}
+		    	}
+		    }
+
+		    &.active{
+		    	background: #8b004c;
+		    	a{
+		    		color: #fff;
+
+		    		&:before{
+						background: url(../img/ui/footer-menu-trigger_icon_sprite@x2.png) no-repeat right bottom;
+						background-size: 200%;
+					}
+		    	}
+		    }
 
 			a{
 				line-height: 45px;
@@ -39,8 +67,8 @@ footer{
 					content: "";
 					width: 16px;
 					height: 8px;
-					background: url(../img/ui/footer-menu-trigger_icon@x2.png) no-repeat center center;
-					background-size: cover;
+					background: url(../img/ui/footer-menu-trigger_icon_sprite@x2.png) no-repeat left top;
+					background-size: 200%;
 					display: inline-block;
 					vertical-align: middle;
 					position: relative;

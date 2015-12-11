@@ -1,0 +1,163 @@
+@import "../variables";
+
+.astrazeneka-page{
+
+	&:after{
+		content: "";
+		height: 0;
+		width: 0;
+		display: block;
+		clear: both;
+		visibility: hidden;
+	}
+
+	.block{
+
+		&_1{
+			min-height: 866px;
+			background: url(../img/astrazeneka_block_1_bg.png) no-repeat 85% center #00d4e2;
+			background-size: contain;
+			width: 100%;
+			h2{
+				color: #fff;
+				text-transform: uppercase;
+				font-size: @font-size_57px;
+				padding-top: 35%;
+				position: relative;
+
+				&:before{
+					content: "";
+					width: 253px;
+					height: 59px;
+					background: url(../img/astrazeneka-logo@x2.png) no-repeat center center;
+					background-size: cover;
+					position: absolute;
+					top: calc(~"65% + 30px");
+					left: 0;
+				}
+
+			}
+		}
+		&_2{
+			background: #c6d600;
+			padding: 90px 0;
+			padding-bottom: 50px;
+			border-top: 1px solid #fff;
+
+			&:after{
+				content: "";
+				height: 0;
+				width: 0;
+				display: block;
+				clear: both;
+				visibility: hidden;
+			}
+
+			.left{
+				width: calc(~'50% - 70px');
+				padding-right: 70px;
+				float: left;
+			}
+			.right{
+				width: calc(~'50% - 70px');
+				float: left;
+				padding-left: 70px;
+			}
+
+			p{
+				width: 100%;
+				color: #3f4444;
+				line-height: 30px;
+				font-family: 'HelveticaNeueCyr-Roman';
+    			font-weight: 400;
+    			font-size: @font-size_22px;
+    			padding-top: 30px;
+    			padding-bottom: 40px;
+    			border-top: 2px solid #3f4444;
+			}
+		}
+		&_3{	
+
+			padding: 80px 0;
+
+			&:after{
+				content: "";
+				height: 0;
+				width: 0;
+				display: block;
+				clear: both;
+				visibility: hidden;
+			}
+
+			.left{
+				width: calc(~'50% - 70px');
+				padding-right: 70px;
+				float: left;
+			}
+			.right{
+				width: calc(~'50% - 70px');
+				float: left;
+				padding-left: 70px;
+			}
+
+			img{
+				width: 417px;
+			}
+			p{
+				color: #3f4444;
+				font-family: 'HelveticaNeueCyr-Roman';
+    			font-weight: 400;
+    			font-size: @font-size_22px;
+			}
+			.phone,
+			.fax,
+			.mail
+			{
+				font-style: italic;
+				font-size: @font-size_22px;
+				color: #3f4444;
+				line-height: 30px;
+
+				a{
+					display: inline-block;
+					position: relative;
+
+					&:before{
+						content: "";
+						width: 25px;
+						height: 25px;
+						display: inline-block;
+						vertical-align: middle;
+						margin-top: -7px;
+						margin-right: 20px;
+					}
+				}
+			}
+			.phone{
+				margin-top: 25px;
+
+				a:before{
+					background: url(../img/ui/phone_icon_2@x2.png) no-repeat center center;
+					background-size: contain;
+				}
+
+			}
+			.mail{
+				margin-top: 35px;
+
+				a:before{
+					background: url(../img/ui/mail_icon@x2.png) no-repeat center center;
+					background-size: contain;
+				}
+			}
+
+			.fax{
+
+				a:before{
+					background: url(../img/ui/fax_icon@x2.png) no-repeat center center;
+					background-size: contain;
+				}
+			}
+		}
+	}
+}

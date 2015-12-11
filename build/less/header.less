@@ -1,6 +1,18 @@
 @import "variables";
 
 header{
+
+	&.small{
+		height: 75px;
+		-webkit-box-shadow: 0px 0px 100px -10px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow:    0px 0px 100px -10px rgba(50, 50, 50, 0.75);
+		box-shadow:         0px 0px 100px -10px rgba(50, 50, 50, 0.75);
+
+		.logo{
+			width: 175px;
+			height: 47px;
+		}
+	}
 	&:after{
 		content: "";
 		width: 0;
@@ -75,20 +87,31 @@ header{
 				margin-right: 15px;
 				&:before{
 					content: "";
-					width: 19px;
-					height: 29px;
+					width: 36px;
+					height: 36px;
 					display: inline-block;
 					vertical-align: middle;
 					margin-top: -3px;
 					position: relative;
 					margin-right: 12px;
 					background: url(../img/ui/phone_icon@x2.png) no-repeat center center;
-					background-size: cover;
+					background-size: 19px;
 				}
 			}
 			a{
 				&:nth-of-type(1){
 					margin-right: 5px;
+				}
+			}
+
+			&:hover,
+			.active
+			{
+				span{
+					&:before{
+						background: url(../img/ui/phone_icon@x2.png) no-repeat center center #f0ab00;
+						background-size: 19px;
+					}
 				}
 			}
 		}
@@ -102,15 +125,25 @@ header{
     			font-size: @font-size_15px;
 				&:before{
 					content: "";
-					width: 28px;
-					height: 27px;
+					width: 36px;
+					height: 36px;
 					display: inline-block;
 					vertical-align: middle;
 					margin-top: -5px;
 					position: relative;
 					margin-right: 10px;
 					background: url(../img/ui/account_icon.png) no-repeat center center;
-					background-size: cover;
+					background-size: 28px;
+				}
+			}
+			&:hover,
+			.active
+			{
+				a{
+					&:before{
+						background: url(../img/ui/account_icon.png) no-repeat center center #f0ab00;
+						background-size: 28px;
+					}
 				}
 			}
 		}
@@ -124,15 +157,26 @@ header{
     			font-size: @font-size_15px;
 				&:before{
 					content: "";
-					width: 29px;
-					height: 30px;
+					width: 36px;
+					height: 36px;
 					display: inline-block;
 					vertical-align: middle;
 					margin-top: -5px;
 					position: relative;
 					margin-right: 8px;
 					background: url(../img/ui/reg_icon.png) no-repeat center center;
-					background-size: cover;
+					background-size: 29px;
+				}
+			}
+
+			&:hover,
+			.active
+			{
+				a{
+					&:before{
+						background: url(../img/ui/reg_icon.png) no-repeat center center #f0ab00;
+						background-size: 29px;
+					}
 				}
 			}
 		}

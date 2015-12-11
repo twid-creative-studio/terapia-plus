@@ -71,6 +71,9 @@
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   height: 45px;
   background: #f0ab00;
   margin: 0;
@@ -78,7 +81,7 @@ footer {
   overflow: hidden;
 }
 footer .menu {
-  width: calc(100% - 360px);
+  width: calc(100% - 400px);
   display: inline-block;
 }
 footer .menu:after {
@@ -97,6 +100,28 @@ footer .menu li {
   vertical-align: top;
   list-style: none;
   text-align: center;
+  -webkit-transition: all 0.1s linear;
+          transition: all 0.1s linear;
+}
+footer .menu li:hover {
+  background: #8b004c;
+}
+footer .menu li:hover a {
+  color: #fff;
+}
+footer .menu li:hover a:before {
+  background: url(../img/ui/footer-menu-trigger_icon_sprite@x2.png) no-repeat left bottom;
+  background-size: 200%;
+}
+footer .menu li.active {
+  background: #8b004c;
+}
+footer .menu li.active a {
+  color: #fff;
+}
+footer .menu li.active a:before {
+  background: url(../img/ui/footer-menu-trigger_icon_sprite@x2.png) no-repeat right bottom;
+  background-size: 200%;
 }
 footer .menu li a {
   line-height: 45px;
@@ -108,8 +133,8 @@ footer .menu li a:before {
   content: "";
   width: 16px;
   height: 8px;
-  background: url(../img/ui/footer-menu-trigger_icon@x2.png) no-repeat center center;
-  background-size: cover;
+  background: url(../img/ui/footer-menu-trigger_icon_sprite@x2.png) no-repeat left top;
+  background-size: 200%;
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -142,6 +167,14 @@ header {
   background: #fff;
   border-bottom: 1px solid #ccc2d1;
   position: relative;
+}
+header.small {
+  height: 75px;
+  box-shadow: 0px 0px 100px -10px rgba(50, 50, 50, 0.75);
+}
+header.small .logo {
+  width: 175px;
+  height: 47px;
 }
 header:after {
   content: "";
@@ -216,18 +249,23 @@ header .right .app span {
 }
 header .right .app span:before {
   content: "";
-  width: 19px;
-  height: 29px;
+  width: 36px;
+  height: 36px;
   display: inline-block;
   vertical-align: middle;
   margin-top: -3px;
   position: relative;
   margin-right: 12px;
   background: url(../img/ui/phone_icon@x2.png) no-repeat center center;
-  background-size: cover;
+  background-size: 19px;
 }
 header .right .app a:nth-of-type(1) {
   margin-right: 5px;
+}
+header .right .app:hover span:before,
+header .right .app .active span:before {
+  background: url(../img/ui/phone_icon@x2.png) no-repeat center center #f0ab00;
+  background-size: 19px;
 }
 header .right .account {
   padding: 0 19px;
@@ -240,15 +278,20 @@ header .right .account a {
 }
 header .right .account a:before {
   content: "";
-  width: 28px;
-  height: 27px;
+  width: 36px;
+  height: 36px;
   display: inline-block;
   vertical-align: middle;
   margin-top: -5px;
   position: relative;
   margin-right: 10px;
   background: url(../img/ui/account_icon.png) no-repeat center center;
-  background-size: cover;
+  background-size: 28px;
+}
+header .right .account:hover a:before,
+header .right .account .active a:before {
+  background: url(../img/ui/account_icon.png) no-repeat center center #f0ab00;
+  background-size: 28px;
 }
 header .right .reg {
   padding: 0 25px;
@@ -261,15 +304,20 @@ header .right .reg a {
 }
 header .right .reg a:before {
   content: "";
-  width: 29px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   display: inline-block;
   vertical-align: middle;
   margin-top: -5px;
   position: relative;
   margin-right: 8px;
   background: url(../img/ui/reg_icon.png) no-repeat center center;
-  background-size: cover;
+  background-size: 29px;
+}
+header .right .reg:hover a:before,
+header .right .reg .active a:before {
+  background: url(../img/ui/reg_icon.png) no-repeat center center #f0ab00;
+  background-size: 29px;
 }
 
 .background-mask {
@@ -316,6 +364,13 @@ body {
   padding: 0;
   border: 0;
   -webkit-appearance: none!important;
+}
+.main {
+  margin-bottom: 45px;
+}
+.container {
+  width: 1098px;
+  margin: 0 auto;
 }
 #page-preloader {
   position: fixed;
@@ -471,6 +526,176 @@ button {
 }
 
 
+.astrazeneka-page:after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.astrazeneka-page .block_1 {
+  min-height: 866px;
+  background: url(../img/astrazeneka_block_1_bg.png) no-repeat 85% center #00d4e2;
+  background-size: contain;
+  width: 100%;
+}
+.astrazeneka-page .block_1 h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3.563em;
+  padding-top: 35%;
+  position: relative;
+}
+.astrazeneka-page .block_1 h2:before {
+  content: "";
+  width: 253px;
+  height: 59px;
+  background: url(../img/astrazeneka-logo@x2.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: calc(65% + 30px);
+  left: 0;
+}
+.astrazeneka-page .block_2 {
+  background: #c6d600;
+  padding: 90px 0;
+  padding-bottom: 50px;
+  border-top: 1px solid #fff;
+}
+.astrazeneka-page .block_2:after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.astrazeneka-page .block_2 .left {
+  width: calc(50% - 70px);
+  padding-right: 70px;
+  float: left;
+}
+.astrazeneka-page .block_2 .right {
+  width: calc(50% - 70px);
+  float: left;
+  padding-left: 70px;
+}
+.astrazeneka-page .block_2 p {
+  width: 100%;
+  color: #3f4444;
+  line-height: 30px;
+  font-family: 'HelveticaNeueCyr-Roman';
+  font-weight: 400;
+  font-size: 1.375em;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  border-top: 2px solid #3f4444;
+}
+.astrazeneka-page .block_3 {
+  padding: 80px 0;
+}
+.astrazeneka-page .block_3:after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.astrazeneka-page .block_3 .left {
+  width: calc(50% - 70px);
+  padding-right: 70px;
+  float: left;
+}
+.astrazeneka-page .block_3 .right {
+  width: calc(50% - 70px);
+  float: left;
+  padding-left: 70px;
+}
+.astrazeneka-page .block_3 img {
+  width: 417px;
+}
+.astrazeneka-page .block_3 p {
+  color: #3f4444;
+  font-family: 'HelveticaNeueCyr-Roman';
+  font-weight: 400;
+  font-size: 1.375em;
+}
+.astrazeneka-page .block_3 .phone,
+.astrazeneka-page .block_3 .fax,
+.astrazeneka-page .block_3 .mail {
+  font-style: italic;
+  font-size: 1.375em;
+  color: #3f4444;
+  line-height: 30px;
+}
+.astrazeneka-page .block_3 .phone a,
+.astrazeneka-page .block_3 .fax a,
+.astrazeneka-page .block_3 .mail a {
+  display: inline-block;
+  position: relative;
+}
+.astrazeneka-page .block_3 .phone a:before,
+.astrazeneka-page .block_3 .fax a:before,
+.astrazeneka-page .block_3 .mail a:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -7px;
+  margin-right: 20px;
+}
+.astrazeneka-page .block_3 .phone {
+  margin-top: 25px;
+}
+.astrazeneka-page .block_3 .phone a:before {
+  background: url(../img/ui/phone_icon_2@x2.png) no-repeat center center;
+  background-size: contain;
+}
+.astrazeneka-page .block_3 .mail {
+  margin-top: 35px;
+}
+.astrazeneka-page .block_3 .mail a:before {
+  background: url(../img/ui/mail_icon@x2.png) no-repeat center center;
+  background-size: contain;
+}
+.astrazeneka-page .block_3 .fax a:before {
+  background: url(../img/ui/fax_icon@x2.png) no-repeat center center;
+  background-size: contain;
+}
+
+.enter-page:after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.enter-page .header {
+  height: 285px;
+  background: #3c1053;
+}
+.enter-page .header h1 {
+  font-size: 3.125em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 170px;
+  position: relative;
+}
+.enter-page .header h1:before {
+  content: "";
+  width: 60px;
+  height: 10px;
+  background: #f0aa00;
+  top: 145px;
+  left: 0;
+  position: absolute;
+}
+
 .index:after {
   content: "";
   height: 0;
@@ -532,8 +757,28 @@ button {
   list-style: none;
   margin-bottom: 40px;
 }
+.index .item ul li:last-child {
+  margin-bottom: 0;
+}
 .index .item ul li a {
   color: #fff;
+  position: relative;
+  font-size: 1.375em;
+}
+.index .item ul li a:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: #f0ab00;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s linear;
+          transition: opacity 0.1s linear;
+}
+.index .item ul li a:hover:after {
+  opacity: 1;
 }
 .index .item_1 {
   background: #3c1053;
@@ -546,5 +791,82 @@ button {
 }
 .index .item_3 {
   background: #003a65;
+  text-align: center;
+}
+.index .item_3 ul li {
+  text-align: center;
+  color: #fff;
+  font-size: 1.375em;
+  letter-spacing: 0.66px;
+}
+.index .item_3 a.confirm {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.563em;
+  letter-spacing: 0.5px;
+  line-height: 60px;
+  height: 60px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  padding: 0 40px;
+  margin-top: 160px;
+  -webkit-transition: all 0.1s linear;
+          transition: all 0.1s linear;
+}
+.index .item_3 a.confirm:hover {
+  background: #fff;
+  color: #003a65;
+}
+
+.zaglushka_for_doctor,
+.zaglushka_korisna_info {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #003865;
+}
+.zaglushka_for_doctor section,
+.zaglushka_korisna_info section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-50% - 60px));
+      -ms-transform: translate(-50%, calc(-50% - 60px));
+          transform: translate(-50%, calc(-50% - 60px));
+}
+.zaglushka_for_doctor section .icon,
+.zaglushka_korisna_info section .icon {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  position: relative;
+  background: #f0ab00;
+  margin: 0px auto;
+  margin-bottom: 40px;
+}
+.zaglushka_for_doctor section .icon img,
+.zaglushka_korisna_info section .icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.zaglushka_for_doctor section .title,
+.zaglushka_korisna_info section .title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.563em;
+  letter-spacing: 0.5;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  line-height: 60px;
+}
+.zaglushka_korisna_info {
+  background: #8b004c;
 }
 

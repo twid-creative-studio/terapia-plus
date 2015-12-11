@@ -1,0 +1,51 @@
+@import "../variables";
+
+.zaglushka{
+
+	&_for_doctor,
+	&_korisna_info
+	{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: #003865;
+		section{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, calc(~'-50% - 60px'));
+
+			.icon{
+				width: 240px;
+				height: 240px;
+				border-radius: 50%;
+				position: relative;
+				background: #f0ab00;
+				margin: 0px auto;
+				margin-bottom: 40px;
+
+				img{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 30%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			.title{
+				text-transform: uppercase;
+				font-weight: 500;
+				font-size: @font-size_25px;
+				letter-spacing: 25*20/1000;
+				color: #fff;
+				text-align: center;
+				position: relative;
+				line-height: 60px;
+			}
+		}
+	}
+	&_korisna_info{
+		background: #8b004c;
+	}
+	
+}
