@@ -40,13 +40,17 @@ document.ontouchmove = function(e){
 };
 
 //Dropdown
-$(document).on('click','.cuslom_dropdown', function(){
-    $(this).toggleClass('active');
-    $(this).find('ul').toggleClass('active'); 
+$(document).on('click','.cuslom_dropdown ul > li:first-child', function(){
+	$('.cuslom_dropdown').removeClass('active');
+    $('.cuslom_dropdown').find('ul').removeClass('active');
+    $(this).parents('.cuslom_dropdown').addClass('active');
+    $(this).parents('ul').addClass('active'); 
 });
-$(".cuslom_dropdown li a").click(function(){
-    $(this).parents('.cuslom_dropdown').find('ul > li:first-child > a').text($(this).text()); 
-    $(this).parents('.cuslom_dropdown').find('ul > li:first-child > a').attr('class',$(this).attr('class')); 
+$(".cuslom_dropdown li").click(function(){
+    $(this).parents('.cuslom_dropdown').find('ul > li:first-child').text($(this).text()); 
+    $(this).parents('.cuslom_dropdown').find('ul > li:first-child').attr('class',$(this).attr('class')); 
+    $(this).parents('.cuslom_dropdown').removeClass('active');
+    $(this).parents('ul').removeClass('active'); 
 });
 
 //Placeholder
@@ -62,6 +66,27 @@ $(document).on("focusout", "input,textarea", function(){
 });
 
 
+//Radio
+$(document).on('click', '.radio', function() {
+	$(this).parents('form').find('.radio').removeClass('active');
+	$(this).addClass('active');
+});
+
+
+
+// включаем обработчик в разрешённой зоне
+$(".cuslom_dropdown").mouseout(function(){
+    $("body").on("click",onClick); //разрешаем клик
+});
+// выключаем обработчик в запрещённой зоне
+$(".cuslom_dropdown").mouseover(function(){
+    $("body").off("click",onClick); //запрещаем клик
+})
+// обработчик
+function onClick(){
+    $('.cuslom_dropdown').removeClass('active');
+    $('.cuslom_dropdown').find('ul').removeClass('active'); 
+}
 
 //EVENTS -- {
 

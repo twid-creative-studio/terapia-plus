@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Terapia-plus|Главная</title>
+	<link rel="stylesheet" href="css/main.css">
+	
+	<!--favicon's-->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="img/ico/favicon.png">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+</head>
+<body>
+
+	<div id="page-preloader">
+		<span class="spinner">
+			<div class="logo"></div>
+		</span>
+	</div>
+
+	<header class="small">
+		<a href="#" class="logo"></a>
+
+		<div class="right">
+			<div class="phone"><a href="tel:0800211202">0 800 211 202</a></div>
+			<div class="app">
+				<span><a href="#">Мобільний додаток</a></span>
+				<a href="#"><img src="img/ui/appStore_icon.png" alt=""></a>
+				<a href="#"><img src="img/ui/googlePay_icon.png" alt=""></a>
+			</div>
+			<div class="account"><a href="#">Особистий кабінет</a></div>
+			<div class="reg"><a href="#">Реєстрація</a></div>
+		</div>
+	</header>
+
+<div class="main reg-page">
+	<div class="header">
+		<div class="container">
+			<ul class="nav-steps">
+				<li class="active">
+					<div class="number"><span>1</span></div>
+					<div class="title"><span>реєстрація</span></div>
+				</li>
+				<li>
+					<div class="number"><span>2</span></div>
+					<div class="title"><span>Підтвердження реєстрації</span></div>
+				</li>
+				<li>
+					<div class="number"><span>3</span></div>
+					<div class="title"><span>Вхід</span></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="body">
+		<div class="container">
+			<form>
+				<div class="reg-form">
+				
+					<h3>дані для реєстрації:</h3>
+					<ul>
+						<li><label for="">Номер Вашої картки (13 знаків):<span>*</span></label><input type="text" placeholder=""></li>	
+						<li><label for="">Номер Вашого мобільного телефону:</label><input type="text" placeholder=""></li>
+						<li><label for="">Ваша електронна адреса (e-mail):<span>*</span></label><input type="text" placeholder=""></li>	
+						<li>
+							<label for="">Місто, в якому Ви знаходитесь:<span>*</span></label>
+							<div class="cuslom_dropdown">
+								<ul>
+									<li>Виберіть місто із переліку</li>
+									<li>Киев</li>
+									<li>Харьков</li>
+									<li>Одесса</li>
+									<li>Днепропетровск</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<label for="">Терапевтична сфера, в рамках якої призначене лікування:<span>*</span></label>
+							<div class="cuslom_dropdown">
+								<ul>
+									<li>Виберіть місто із переліку</li>
+									<li>Киев</li>
+									<li>Харьков</li>
+									<li>Одесса</li>
+									<li>Днепропетровск</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					
+				</div>
+				<div class="auth-form">
+					
+					<h3>дані для авторизації:</h3>
+					<ul>
+						<li><label for="">Ваш логін:<span>*</span></label><input type="text" placeholder=""></li>	
+						<li><label for="">Пароль:<span>*</span></label><input type="text" placeholder=""></li>
+						<li><label for="">Підтвердження паролю:<span>*</span></label><input type="text" placeholder=""></li>
+					</ul>
+					
+				</div>
+				<div class="verification-form">
+					
+					<h3>підтвердження авторизації:</h3>
+
+					<ul>
+						<li>
+							<label for=""><img src="img/captcha.png" alt=""></label>
+							<p>
+								<span>Введіть код, який Ви бачите ліворуч</span>
+								<input type="text">
+							</p>
+						</li>
+						<li><span class="radio active">Я підтверджую, що препарат, що приймає участь в програмі був призначений мені лікарем</span></li>
+						<li><span class="radio">Я підтверджую свою згоду з Умовами програми (в тому числі згоду на отримання інформаційних повідомлень про програму)</span></li>
+					</ul>
+				</div>
+				<p class="warning">* Поля, обов’язкові до заповнення</p>
+				<ul>
+					<li><input type="submit" value="зареєструватися"></li>	
+				</ul>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<footer>
+	<nav class="menu">		
+		<li><a href="#">про програму</a></li>
+		<li><a href="#">Корисна інформація</a></li>
+		<li><a href="#">Для лікаря</a></li>
+		<li><a href="#">«АстраЗенека»</a></li>
+		<li><a href="#">Контакти</a></li>
+	</nav>
+	<p class="copyright"><span>©  <span>AstraZeneca 2015</span>, designed by</span><a href="#"><img src="img/ui/copyright.png" alt=""></a></p>
+</footer>
+
+
+<!--scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/jquery.autosize.js"></script>
+<script src="js/SmoothScroll.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
