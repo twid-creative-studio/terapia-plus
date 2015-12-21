@@ -2793,12 +2793,13 @@ button {
   padding: 0 35px;
   vertical-align: middle;
 }
-.reg-page .body form input[type="submit"] {
+.reg-page .body form a.submit {
   margin: 100px auto;
   width: 325px;
   display: block;
   height: 65px;
   line-height: 65px;
+  text-align: center;
   background: #c9caca;
   color: #fff;
   text-transform: uppercase;
@@ -2809,14 +2810,14 @@ button {
   -webkit-transition: all 0.1s linear;
           transition: all 0.1s linear;
 }
-.reg-page .body form input[type="submit"]:hover {
+.reg-page .body form a.submit:hover {
   cursor: default;
   background: #c9caca;
 }
-.reg-page .body form input[type="submit"].active {
+.reg-page .body form a.submit.active {
   background: #fcc426;
 }
-.reg-page .body form input[type="submit"].active:hover {
+.reg-page .body form a.submit.active:hover {
   background: #f0ab00;
   cursor: pointer;
 }
@@ -3055,11 +3056,12 @@ button {
   padding: 0 35px;
   vertical-align: middle;
 }
-.ver-page .body input[type="submit"] {
+.ver-page .body a.submit {
   margin: 100px auto;
   width: 325px;
   display: block;
   height: 65px;
+  text-align: center;
   line-height: 65px;
   background: #c9caca;
   color: #fff;
@@ -3071,14 +3073,14 @@ button {
   -webkit-transition: all 0.1s linear;
           transition: all 0.1s linear;
 }
-.ver-page .body input[type="submit"]:hover {
+.ver-page .body a.submit:hover {
   cursor: default;
   background: #c9caca;
 }
-.ver-page .body input[type="submit"].active {
+.ver-page .body a.submit.active {
   background: #fcc426;
 }
-.ver-page .body input[type="submit"].active:hover {
+.ver-page .body a.submit.active:hover {
   background: #f0ab00;
   cursor: pointer;
 }
