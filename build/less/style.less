@@ -19,6 +19,11 @@ body{
     }
 }
 
+.clear{
+	display: block;
+	clear: both;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -56,4 +61,46 @@ body{
 	}
 }
 
+.GITheWall{
+	position: relative;
+}
+.GI_TW_expander{
+	//border: 3px solid #f0ab00 !important;
+	background: #fff !important;
+	transition: all 1s linear;
 
+	&.opened{
+		border: 3px solid #f0ab00 !important;
+		background: #fff !important;
+		padding: 30px 20px;
+		font-size: 22px;
+		color: #3f4444;
+		line-height: 30px;
+		font-weight: 400;
+
+		.GI_TW_close{
+			width: 64px !important;
+			height: 64px !important;
+			top: 0 !important;
+			right: 0 !important;
+			background: url(../img/ui/answer-close.png) no-repeat center center #f0ab00 !important;
+			background-size: 25px !important;
+		}
+	}
+	
+}
+
+
+.GI_TW_expander .GI_TW_pointer{
+	background: url(../img/ui/point.png) no-repeat center center !important;
+	width: 34px !important;
+	height: 20px !important;
+	border: none;
+	border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    margin-top: -50px !important;
+}
+.answer{
+	display: none;
+}
