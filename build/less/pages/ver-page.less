@@ -11,10 +11,37 @@
 		visibility: hidden;
 	}
 
+	.header-top{
+		height: 285px;
+		background: #3c1053;
+
+		h1{
+			position: relative;
+			letter-spacing: 45*20/1000px;
+			font-size: @font-size_45px;
+			color: #fff;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding-top: 170px;
+			position: relative;
+
+			&:before{
+				content: "";
+				width: 52px;
+				height: 5px;
+				background: #f0aa00;
+				position: absolute;
+				top: 170-20px;
+				left: 0;
+			}
+		}
+	}
+
 	.header{
 
 		.nav-steps{
 			padding: 95px 160px;
+			padding-bottom: 30px;
 			padding-right: 0;
 			margin-left: 20px;
 			li{

@@ -79,6 +79,7 @@ footer {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  z-index: 11;
 }
 footer .menu {
   width: calc(100% - 400px);
@@ -170,7 +171,7 @@ header {
 }
 header.small {
   height: 75px;
-  box-shadow: 0px 0px 100px -10px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 50px -10px rgba(50, 50, 50, 0.75);
 }
 header.small .logo {
   width: 175px;
@@ -371,7 +372,8 @@ body {
   -webkit-appearance: none!important;
 }
 .main {
-  margin-bottom: 45px;
+  padding-bottom: 45px;
+  margin-bottom: 0;
 }
 .container {
   width: 1100px;
@@ -447,7 +449,7 @@ a {
 }
 .cuslom_dropdown {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   padding: 0;
   margin: 0;
   width: 420px;
@@ -483,9 +485,9 @@ a {
   width: calc(100% - 40px) !important;
   padding: 0 20px;
   vertical-align: middle;
-  font-weight: 300;
+  letter-spacing: normal;
   color: #a5a4a5;
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-family: 'HelveticaNeueCyr-Roman';
   font-weight: 400;
   text-align: left;
@@ -897,21 +899,22 @@ button {
   background: #3c1053;
 }
 .enter-page .header h1 {
-  font-size: 3.125em;
+  letter-spacing: 0.9px;
+  font-size: 2.813em;
   color: #fff;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
   padding-top: 170px;
   position: relative;
 }
 .enter-page .header h1:before {
   content: "";
-  width: 60px;
-  height: 10px;
+  width: 52px;
+  height: 5px;
   background: #f0aa00;
-  top: 145px;
-  left: 0;
   position: absolute;
+  top: 150px;
+  left: 0;
 }
 .enter-page .body ul li {
   list-style: none;
@@ -994,7 +997,7 @@ button {
           transition: opacity 0.1 linear;
   opacity: 0;
 }
-.enter-page .body form a:hover {
+.enter-page .body form a:hover:after {
   opacity: 1;
 }
 
@@ -1152,8 +1155,8 @@ button {
 .mob-page .block_6 .title:before,
 .mob-page .block_7 .title:before {
   width: 52px !important;
-  height: 7px !important;
-  top: -20px !important;
+  height: 5px !important;
+  top: -10px !important;
 }
 .mob-page .block_3 ul,
 .mob-page .block_4 ul,
@@ -1210,11 +1213,13 @@ button {
   text-align: center;
   padding-top: 130px;
   position: relative;
+  max-width: 880px;
+  margin: 0 auto;
 }
 .mob-page .block_1 h2:before {
   content: "";
   width: 60px;
-  height: 10px;
+  height: 5px;
   background: #fff;
   position: absolute;
   top: 85px;
@@ -1278,6 +1283,13 @@ button {
   text-transform: uppercase;
   color: #fff;
 }
+.mob-page .block_2 a {
+  width: 300px;
+  text-align: left;
+}
+.mob-page .block_2 a:nth-of-type(2) {
+  padding-left: 60px;
+}
 .mob-page .block_2 span,
 .mob-page .block_2 a {
   display: inline-block;
@@ -1300,11 +1312,9 @@ button {
   font-family: 'HelveticaNeueCyr-Roman';
   font-weight: 400;
   line-height: 24px;
-  width: 230px;
   padding-top: 15px;
 }
 .mob-page .block_2 span {
-  width: 150px;
   text-align: center;
   vertical-align: top;
   padding-top: 50px;
@@ -1327,7 +1337,6 @@ button {
 .mob-page .block_3 .title:before {
   content: "";
   width: 60px;
-  height: 8px;
   background: #f0ab00;
   position: absolute;
   top: -25px;
@@ -1389,6 +1398,9 @@ button {
   background: #f0ab00;
   width: calc(100% - 66px);
 }
+.mob-page .block_3 .screen_1 img {
+  width: 723px;
+}
 .mob-page .block_3 .screen_2 ul li:nth-child(1) {
   margin-top: -31px;
 }
@@ -1417,7 +1429,7 @@ button {
 .mob-page .block_4 .title:before {
   content: "";
   width: 60px;
-  height: 8px;
+  height: 5px;
   background: #f0ab00;
   position: absolute;
   top: -25px;
@@ -1529,7 +1541,7 @@ button {
 .mob-page .block_5 .title:before {
   content: "";
   width: 60px;
-  height: 8px;
+  height: 5px;
   background: #003865;
   position: absolute;
   top: -25px;
@@ -1665,7 +1677,7 @@ button {
 .mob-page .block_6 .title:before {
   content: "";
   width: 60px;
-  height: 8px;
+  height: 5px;
   background: #fff;
   position: absolute;
   top: -25px;
@@ -1763,7 +1775,7 @@ button {
 .mob-page .block_7 .title:before {
   content: "";
   width: 60px;
-  height: 8px;
+  height: 5px;
   background: #f0ab00;
   position: absolute;
   top: -25px;
@@ -1850,7 +1862,8 @@ button {
 }
 
 .pro-page {
-  margin-bottom: 30px;
+  padding-bottom: 0px;
+  margin-bottom: -10px;
 }
 .pro-page .container:after {
   content: "";
@@ -1907,6 +1920,7 @@ button {
   height: 128px;
   background: url(../img/ui/pin-label.png) no-repeat center center;
   background-size: 88px;
+  margin-bottom: 40px;
 }
 .pro-page .block_1 .left .form {
   position: absolute;
@@ -2111,8 +2125,9 @@ button {
   color: #3f4444;
   line-height: 40px;
   letter-spacing: 0.5px;
-  font-size: 1.563em;
+  font-size: 2.5em;
   margin-bottom: 40px;
+  text-transform: uppercase;
 }
 .pro-page .block_3 .right img {
   max-width: 190px;
@@ -2151,7 +2166,7 @@ button {
   font-weight: 700;
   color: #003865;
   text-transform: uppercase;
-  line-height: 60px;
+  line-height: 40px;
   font-size: 3.125em;
   position: relative;
   letter-spacing: 1px;
@@ -2229,7 +2244,7 @@ button {
 .pro-page .block_4 ul.list_1 li p {
   color: #3f4444;
   font-size: 1.375em;
-  line-height: 30px;
+  line-height: 25px;
 }
 .pro-page .block_4 .title-list {
   font-weight: 700;
@@ -2369,9 +2384,10 @@ button {
 }
 .pro-page .block_5 .table .line-head span {
   font-weight: 700;
-  font-size: 1.125em;
+  font-size: 1.563em;
   color: #003a65;
   display: inline-block;
+  letter-spacing: normal;
   vertical-align: middle;
 }
 .pro-page .block_5 .table .line {
@@ -2386,7 +2402,7 @@ button {
   text-transform: uppercase;
   color: #003a65;
   display: inline-block;
-  font-size: 1.25em;
+  font-size: 1.375em;
   line-height: 50px;
   letter-spacing: 0.7px;
   font-family: 'HelveticaNeueCyr-Roman';
@@ -2397,9 +2413,10 @@ button {
   top: 0;
   right: 0;
   width: 105px;
+  height: 50px;
   text-align: center;
   font-weight: 700;
-  font-size: 1.875em;
+  font-size: 3.125em;
   color: #fff;
 }
 .pro-page .block_5 .table .line .label:before {
@@ -2415,6 +2432,20 @@ button {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+.pro-page .block_5 .table .line .label span {
+  display: inline-block;
+  vertical-align: middle;
+  background: transparent;
+  color: #fff;
+}
+.pro-page .block_5 .table .line .label span:nth-of-type(1) {
+  font-size: 30px;
+  font-weight: 100;
+  margin-top: 5px;
+}
+.pro-page .block_5 .table .line .label span:nth-of-type(2) {
+  font-size: 20px;
 }
 .pro-page .block_6 {
   background: #68d2df;
@@ -2557,6 +2588,10 @@ button {
   font-size: 1.375em;
   color: #f0ab00;
   margin-top: 20px;
+  transiion: all 0.1s linear;
+}
+.pro-page .block_7 .item a:hover {
+  color: #cd9302;
 }
 .pro-page .block_7 .item .answer {
   display: block;
@@ -2573,12 +2608,17 @@ button {
 .pro-page .block_8 {
   background: #003865;
   padding: 100px 0;
+  padding-bottom: 150px;
   line-height: 40px;
   font-size: 1.563em;
   color: #fff;
   text-align: center;
   font-family: 'HelveticaNeueCyr-Roman';
   font-weight: 400;
+}
+.pro-page .block_8 p {
+  width: 960px;
+  margin: 0 auto;
 }
 .pro-page .block_8 h5 {
   line-height: 60px;
@@ -2633,7 +2673,7 @@ button {
   height: 100%;
   position: absolute;
   margin-right: 10px;
-  top: 0;
+  top: -27px;
   left: 0;
   background: url(../img/ui/pin.png) no-repeat center top;
   background-size: contain;
@@ -2645,7 +2685,7 @@ button {
   font-weight: 300;
   color: #3f4444;
   font-size: 1.25em;
-  line-height: 30px;
+  line-height: 24px;
 }
 .pro-page .list-adres .item .distance {
   color: #830051;
@@ -2654,7 +2694,11 @@ button {
 }
 .pro-page .list-adres .item .adress {
   font-size: 1.375em;
+}
+.pro-page .list-adres .item .name {
   font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.375em;
 }
 .pro-page .list-adres .show-more {
   padding: 0 25px;
@@ -2684,6 +2728,28 @@ button {
   display: block;
   clear: both;
   visibility: hidden;
+}
+.reg-page .header-top {
+  height: 285px;
+  background: #3c1053;
+}
+.reg-page .header-top h1 {
+  letter-spacing: 0.9px;
+  font-size: 2.813em;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 170px;
+  position: relative;
+}
+.reg-page .header-top h1:before {
+  content: "";
+  width: 52px;
+  height: 5px;
+  background: #f0aa00;
+  position: absolute;
+  top: 150px;
+  left: 0;
 }
 .reg-page .header .nav-steps {
   padding: 95px 160px;
@@ -2783,6 +2849,7 @@ button {
   font-size: 16px;
   font-family: 'HelveticaNeueCyr-Roman';
   font-weight: 400;
+  letter-spacing: normal;
   line-height: 24px;
   width: 400px;
   display: inline-block;
@@ -2800,14 +2867,14 @@ button {
   box-shadow: none;
   background: #dfdedf;
   border: none;
-  width: 350px;
+  width: 380px;
   height: 45px;
-  line-height: 45px;
   color: #3f4444;
   font-size: 16px;
+  letter-spacing: normal;
   font-family: 'HelveticaNeueCyr-Roman';
   font-weight: 400;
-  padding: 0 35px;
+  padding: 0 20px;
   vertical-align: middle;
 }
 .reg-page .body form a.submit {
@@ -2837,6 +2904,24 @@ button {
 .reg-page .body form a.submit.active:hover {
   background: #f0ab00;
   cursor: pointer;
+}
+.reg-page .body form ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #a5a4a5;
+}
+.reg-page .body form :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #a5a4a5;
+  opacity: 1;
+}
+.reg-page .body form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #a5a4a5;
+  opacity: 1;
+}
+.reg-page .body form :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #a5a4a5;
 }
 .reg-page .body form a {
   font-weight: 500;
@@ -2935,8 +3020,31 @@ button {
   clear: both;
   visibility: hidden;
 }
+.ver-page .header-top {
+  height: 285px;
+  background: #3c1053;
+}
+.ver-page .header-top h1 {
+  letter-spacing: 0.9px;
+  font-size: 2.813em;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 170px;
+  position: relative;
+}
+.ver-page .header-top h1:before {
+  content: "";
+  width: 52px;
+  height: 5px;
+  background: #f0aa00;
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
 .ver-page .header .nav-steps {
   padding: 95px 160px;
+  padding-bottom: 30px;
   padding-right: 0;
   margin-left: 20px;
 }

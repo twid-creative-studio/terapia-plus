@@ -10,7 +10,31 @@
 		clear: both;
 		visibility: hidden;
 	}
+	.header-top{
+		height: 285px;
+		background: #3c1053;
 
+		h1{
+			position: relative;
+			letter-spacing: 45*20/1000px;
+			font-size: @font-size_45px;
+			color: #fff;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding-top: 170px;
+			position: relative;
+
+			&:before{
+				content: "";
+				width: 52px;
+				height: 5px;
+				background: #f0aa00;
+				position: absolute;
+				top: 170-20px;
+				left: 0;
+			}
+		}
+	}
 	.header{
 
 		.nav-steps{
@@ -126,6 +150,7 @@
 				font-size: 16px;
 				font-family: 'HelveticaNeueCyr-Roman';
     			font-weight: 400;
+				letter-spacing: normal;
     			line-height: 24px;
     			width: 400px;
     			display: inline-block;
@@ -144,14 +169,15 @@
 				box-shadow: none;
 				background: #dfdedf;
 				border: none;
-				width: 350px;
+				width: 380px;
 				height: 45px;
-				line-height: 45px;
+				//line-height: 45px;
 				color: #3f4444;
 				font-size: 16px;
+				letter-spacing: normal;
 				font-family: 'HelveticaNeueCyr-Roman';
     			font-weight: 400;
-    			padding: 0 35px;
+    			padding: 0 20px;
     			vertical-align: middle;
 			}
 			a.submit{
@@ -183,6 +209,20 @@
 						cursor: pointer;
 					}
 				}
+			}
+			::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+				 color:    #a5a4a5;
+			}
+			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+				 color:    #a5a4a5;
+				 opacity:  1;
+			}
+			::-moz-placeholder { /* Mozilla Firefox 19+ */
+				 color:    #a5a4a5;
+				 opacity:  1;
+			}
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+				 color:    #a5a4a5;
 			}
 			a{
 				font-weight: 500;

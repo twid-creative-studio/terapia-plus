@@ -1,8 +1,9 @@
 @import "../variables";
 
 .pro-page{
+	padding-bottom: 0px;
+	margin-bottom: -10px;
 	
-	margin-bottom: 30px;
 
 	.container{
 		&:after{
@@ -64,6 +65,7 @@
 							height: 128px;
 							background: url(../img/ui/pin-label.png) no-repeat center center;
 							background-size: 88px;
+							margin-bottom: 40px;
 						}
 					}
 				}
@@ -283,8 +285,9 @@
 					color: #3f4444;
 					line-height: 40px;
 					letter-spacing: 25*20/1000px;
-					font-size: @font-size_25px;
+					font-size: @font-size_40px;
 					margin-bottom: 40px;
+					text-transform: uppercase;
 				}
 
 				img{
@@ -327,7 +330,7 @@
 				font-weight: 700;
 				color: #003865;
 				text-transform: uppercase;
-				line-height: 60px;
+				line-height: 40px;
 				font-size: @font-size_50px;
 				position: relative;
 				letter-spacing: 50*20/1000px;
@@ -412,7 +415,7 @@
 					p{
 						color: #3f4444;
 						font-size:  @font-size_22px;
-						line-height: 30px;
+						line-height: 25px;
 					}
 				}
 			}
@@ -596,9 +599,10 @@
 
 					span{
 						font-weight: 700;
-						font-size: @font-size_18px;
+						font-size: @font-size_25px;
 						color: #003a65;
 						display: inline-block;
+						letter-spacing: normal;
 						vertical-align: middle;
 					}
 				}
@@ -614,7 +618,7 @@
 						text-transform: uppercase;
 						color: #003a65;
 						display: inline-block;
-						font-size: @font-size_20px;
+						font-size: @font-size_22px;
 						line-height: 50px;
 						letter-spacing: 20*35/1000px;
 						font-family: 'HelveticaNeueCyr-Roman';
@@ -626,9 +630,10 @@
 						top: 0;
 						right: 0;
 						width: 105px;
+						height: 50px;
 						text-align: center;
 						font-weight: 700;
-						font-size: @font-size_30px;
+						font-size: @font-size_50px;
 						color: #fff;
 
 						&:before{
@@ -642,6 +647,23 @@
 							top: 50%;
 							left: 0;
 							transform: translateY(-50%);
+						}
+
+						span{
+							display: inline-block;
+							vertical-align: middle;
+							background: transparent;
+							color: #fff;
+							
+
+							&:nth-of-type(1){
+								font-size: 30px;
+								font-weight: 100;
+								margin-top: 5px;
+							}
+							&:nth-of-type(2){
+								font-size: 20px;
+							}
 						}
 					}
 				}
@@ -825,6 +847,11 @@
 					font-size: @font-size_22px;
 					color: #f0ab00;
 					margin-top: 20px;
+					transiion: all 0.1s linear;
+
+					&:hover{
+						color: #cd9302;
+					}
 				}
 
 				.answer{
@@ -845,6 +872,7 @@
 		&_8{
 			background: #003865;
 			padding: 100px 0;
+			padding-bottom: 150px;
 
 			line-height: 40px;
 			font-size: @font-size_25px;
@@ -852,6 +880,11 @@
 			text-align: center;
 			font-family: 'HelveticaNeueCyr-Roman';
     		font-weight: 400;
+
+    		p{
+    			width: 960px;
+    			margin: 0 auto;
+    		}
 
     		h5{
     			line-height: 60px;
@@ -913,7 +946,7 @@
 				height: 100%;
 				position: absolute;
 				margin-right: 10px;
-				top: 0;
+				top: -27px;
 				left: 0;
 				background: url(../img/ui/pin.png) no-repeat center top;
 				background-size: contain;
@@ -926,7 +959,7 @@
 				font-weight: 300;
 				color: #3f4444;
 				font-size: @font-size_20px;
-				line-height: 30px;
+				line-height: 24px;
 			}
 			.distance{
 				color: #830051;
@@ -935,7 +968,12 @@
 			}
 			.adress{
 				font-size: @font-size_22px;
+				//font-weight: 500;
+			}
+			.name{
 				font-weight: 500;
+				text-transform: uppercase;
+				font-size: @font-size_22px;
 			}
 		}
 
